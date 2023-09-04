@@ -1,0 +1,42 @@
+
+import java.util.*;
+class Marks
+{
+    Scanner in = new Scanner(System.in);
+    int a,b,c,d,e;
+    double total,avg;
+    char g;
+    void input()
+    {
+        System.out.println("Enter marks obtained in each subject");
+        a = in.nextInt();
+        b = in.nextInt();
+        c = in.nextInt();
+        d = in.nextInt();
+        e = in.nextInt();
+    }
+    void calculate()
+    {
+        total = a+b+c+d+e;
+        avg = (a+b+c+d+e)/5;
+        if(avg > 80)
+        g = 'A';
+        if(avg >60 && avg<=80)
+        g = 'B';
+        if(avg<= 60)
+        g = 'C';
+    }
+    void display()
+    {
+        System.out.println("Total mark ="+total);
+        System.out.println("Average percentage ="+avg);
+        System.out.println("Grade ="+g);
+    }
+      public static void main(String args[])
+      {
+          Marks ob = new Marks();
+          ob.input();
+          ob.calculate();
+          ob.display();
+      }
+}
